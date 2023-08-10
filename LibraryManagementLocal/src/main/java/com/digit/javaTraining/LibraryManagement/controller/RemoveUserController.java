@@ -17,6 +17,13 @@ public class RemoveUserController extends HttpServlet {
 
 		int userID = Integer.parseInt(req.getParameter("uid"));
 
-		User.removeUser(userID);
+		boolean b = User.removeUser(userID);
+		
+		
+		if(b) {
+			
+			resp.sendRedirect("/LibraryManagementLocal/RemoveUserSucc.jsp");
+		}
+	      
 	}
 }

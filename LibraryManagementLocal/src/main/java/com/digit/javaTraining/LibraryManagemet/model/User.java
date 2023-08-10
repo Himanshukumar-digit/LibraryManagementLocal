@@ -118,7 +118,7 @@ public class User {
 		trn.commit();
 	}
 
-	public static void removeUser(int userId) {
+	public static boolean removeUser(int userId) {
 		HibernateManager hbm = new HibernateManager();
 		Transaction trn = hbm.session.beginTransaction();
 
@@ -126,6 +126,8 @@ public class User {
 
 		hbm.session.delete(User);
 		trn.commit();
+		System.out.println(11);
+		return true;
 	}
 
 	public static boolean authenticateUser(int userID, String password) {
@@ -149,13 +151,14 @@ public class User {
 		return user;
 	}
 
-	public static void registerUser(User user) {
+	public static boolean registerUser(User user) {
 		
 		HibernateManager hbm = new HibernateManager();
 		Transaction tr = hbm.session.beginTransaction();
 		
 		hbm.session.save(user);
 		tr.commit();
+		return true;
 
 	}
 }

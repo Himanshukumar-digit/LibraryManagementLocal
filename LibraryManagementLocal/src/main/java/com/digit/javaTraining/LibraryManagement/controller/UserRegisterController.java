@@ -33,7 +33,10 @@ public class UserRegisterController extends HttpServlet {
 		u.setStatus("INACTIVE");
 		u.setAddr(Address);
 
-		User.registerUser(u);
+		boolean b=User.registerUser(u);
+		if(b) {
+			resp.sendRedirect("/LibraryManagementLocal/Welcome.html");
+		}
 		
 	}
 }

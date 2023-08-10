@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.digit.javaTraining.LibraryManagemet.model.Book;
+import com.digit.javaTraining.LibraryManagemet.model.User;
 
 @WebServlet("/removeBook")
 public class RemoveBooksController extends HttpServlet {
@@ -16,6 +17,14 @@ public class RemoveBooksController extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int book_id = Integer.parseInt(req.getParameter("book_id"));
 		
-		Book.removeBook(book_id);
+		boolean b =Book.removeBook(book_id);
+ 
+		
+		
+		if(b) {
+			System.out.println(b);
+			resp.sendRedirect("/LibraryManagementLocal/RemoveBookSucc.jsp");
+		}
+	      
 	}
 }

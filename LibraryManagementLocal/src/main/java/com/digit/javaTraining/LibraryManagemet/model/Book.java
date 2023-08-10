@@ -124,7 +124,7 @@ public class Book {
 		trn.commit();
 	}
 
-	public static void removeBook(int bookId) {
+	public static boolean removeBook(int bookId) {
 		HibernateManager hbm = new HibernateManager();
 		Transaction trn = hbm.session.beginTransaction();
 
@@ -132,6 +132,7 @@ public class Book {
 
 		hbm.session.delete(book);
 		trn.commit();
+		return true;
 	}
 
 	public static void addNewBook(Book b) {
