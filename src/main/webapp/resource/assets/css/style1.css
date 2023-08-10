@@ -41,7 +41,7 @@ section {
 
 	background: transparent;
 
-	border: 2px solid rgb(128, 255, 255);
+	border: 2px solid rgb(64, 128, 128);
 
 	border-radius: 20px;
 
@@ -61,7 +61,7 @@ h2 {
 
 	font-size: 2em;
 
-	color: rgb(0, 255, 255);
+	color: rgb(255, 128, 64);
 
 	text-align: center;
 

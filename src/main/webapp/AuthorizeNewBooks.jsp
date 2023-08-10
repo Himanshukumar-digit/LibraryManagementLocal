@@ -4,8 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="Keywords" content="html, css, html tables, table">
+    <meta name="Description" content="html table">
 <title>Insert title here</title>
+<link rel="stylesheet" href="resource/assets/css/markscard2.css">
 </head>
 <body>
 
@@ -32,8 +35,8 @@
 	session.setAttribute("curIndex", curIndex);
 	%>
 
-	<h1>Current Book</h1>
-	<p>
+	<!-- <h1>Current Book</h1> -->
+	<%-- <p>
 		Book ID:
 		<%=curBook.getBid()%></p>
 	<p>
@@ -48,7 +51,56 @@
 	<p>
 		Book Category:
 		<%=curBook.getCategory()%></p>
-	<br>
+	<br> --%>
+	<div class="container">
+      <h2 align="center">Current Book</h2><br><br>
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Book Name</th>
+            <th>Book Author</th>
+            <th>Book Cost</th>
+            <th>Book Category</th>
+            
+          <tr>  
+        </thead>
+        <!-- <tbody>
+          <tr> -->
+ 
+	<tbody>
+          <tr>
+	<th>
+		
+		<%=curBook.getBid()%></th>
+	
+		
+		<th><%=curBook.getBname()%></th>
+	<th>
+		
+		<%=curBook.getAuthor()%></th>
+	<th>
+		
+		<%=curBook.getCost()%></th>
+		<th>
+		
+		<%=curBook.getCategory()%></th>
+		 </tr>
+          
+        </tbody>
+	
+            
+         <!--  </tr>
+          
+        </tbody> -->
+    
+      
+      </table>
+      <br><br>
+      <a href="Logout">Logout</a>
+      <span style="margin: 0 175px"> </span>
+<a href="admin.html">Back To Menu</a>
+    </div>
 
 	<h3>Manage Request</h3>
 	<form action="authorizeNewBook" method="post">

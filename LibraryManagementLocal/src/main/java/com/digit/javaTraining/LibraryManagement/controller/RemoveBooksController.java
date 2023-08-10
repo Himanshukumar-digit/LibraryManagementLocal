@@ -22,9 +22,13 @@ public class RemoveBooksController extends HttpServlet {
 		
 		
 		if(b) {
-			System.out.println(b);
+			
 			resp.sendRedirect("/LibraryManagementLocal/RemoveBookSucc.jsp");
+		}
+		else {
+			resp.sendRedirect("/LibraryManagementLocal/RemoveBookFail.jsp");
+		}
 		}
 	      
 	}
-}
+

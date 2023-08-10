@@ -4,8 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="Keywords" content="html, css, html tables, table">
+    <meta name="Description" content="html table">
 <title>Insert title here</title>
+<link rel="stylesheet" href="resource/assets/css/markscard.css">
 </head>
 <body>
 
@@ -37,7 +40,7 @@
 	%>
 	
 	
-	<h1>Current User</h1>
+	<%-- <h1>Current User</h1>
 	<p>
 		User ID:
 		<%=curUser.getUid()%></p>
@@ -54,7 +57,56 @@
 		User Email:
 		<%=curUser.getEmail()%></p>
 	<br>
-
+ --%>
+ <div class="container">
+      <h2 align="center">Current User</h2><br><br>
+      <table>
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>User Name</th>
+            <th>User Address</th>
+            <th>User Phone</th>
+            <th>User Email</th>
+            
+          <tr>  
+        </thead>
+        <!-- <tbody>
+          <tr> -->
+ 
+	<tbody>
+          <tr>
+	<th>
+		
+		<%=curUser.getUid()%></th>
+	
+		
+		<th><%=curUser.getUname()%></th>
+	<th>
+		
+		<%=curUser.getAddr()%></th>
+	<th>
+		
+		<%=curUser.getPhone()%></th>
+		<th>
+		
+		<%=curUser.getEmail()%></th>
+		 </tr>
+          
+        </tbody>
+	
+            
+         <!--  </tr>
+          
+        </tbody> -->
+    
+      
+      </table>
+      <br><br>
+      <a href="Logout">Logout</a>
+      <span style="margin: 0 175px"> </span>
+<a href="admin.html">Back To Menu</a>
+    </div>
 	<h3>Manage Request</h3>
 	<form action="authorizeNewUser" method="post">
 

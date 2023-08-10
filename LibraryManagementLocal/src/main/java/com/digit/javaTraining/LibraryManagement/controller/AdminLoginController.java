@@ -25,7 +25,7 @@ public class AdminLoginController extends HttpServlet {
 			resp.sendRedirect("/LibraryManagementLocal/admin.html");
 			return;
 		}
-		resp.sendRedirect("/LibraryManagementLocal/index.html");
+		resp.sendRedirect("/LibraryManagementLocal/AdminFail.jsp");
 	
 	}
 }
