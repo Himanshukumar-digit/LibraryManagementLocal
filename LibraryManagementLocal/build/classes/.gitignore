@@ -1,0 +1,7 @@
+/Admin.hbm.xml
+/Book.hbm.xml
+/PurchaseHistory.hbm.xml
+/Subscription.hbm.xml
+/User.hbm.xml
+/com/
+/hibernate.cfg.xml
